@@ -30,16 +30,11 @@ export default class DetailPage extends Component {
 
     return (
       <div>
-        <h2>{name}</h2>
-        <img src={image} alt={name} />
-        <p>{species}</p>
-        <p>{status}</p>
+        <h2>{character.name}</h2>
+        <img src={character.image} alt={character.name} />
+        <p>{character.species}</p>
+        <p>{character.status}</p>
       </div>
     );
   }
 }
-
-DetailPage.propTypes = {
-  match: PropTypes.string.isRequired
-};
-
