@@ -1,0 +1,32 @@
+.DetailPage {
+  list-style-type: none;
+  background: rgb(159, 246, 157);
+  border: 1px solid rgb(230, 162, 162);
+  padding: 10px;
+  display: flex;
+  grid-template-rows: 30px 120px 20px;
+  grid-gap: 10px;
+  justify-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  width: 25rem;
+
+}
+
+.DetailPage h2 {
+  
+
+}
+
+.DetailPage img {
+  height: 10rem;
+  width: 10rem;
+  object-fit: contain;
+}
+
+.DetailPage p {
+  margin: 0;
+  font-size: .9rem;
+  text-align: center;
+}

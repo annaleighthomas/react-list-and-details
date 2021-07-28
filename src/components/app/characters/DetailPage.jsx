@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { getCharacter } from '../../../services/rickAndMortyApi.js';
-import PropTypes from 'prop-types';
+import styles from './DetailsPage.css';
 
 export default class DetailPage extends Component {
   state = {
@@ -29,7 +29,7 @@ export default class DetailPage extends Component {
     if (!character) return null;
 
     return (
-      <div>
+      <div className={styles.DetailPage}>
         <h2>{character.name}</h2>
         <img src={character.image} alt={character.name} />
         <p>{character.species}</p>
