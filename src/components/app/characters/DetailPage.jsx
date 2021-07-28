@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getCharacter } from '../../../utils';
+import { getCharacter } from '../../../services/rickAndMortyApi.js';
 import PropTypes from 'prop-types';
 
 export default class DetailPage extends Component {
@@ -12,6 +12,7 @@ export default class DetailPage extends Component {
     const { match } = this.props;
     try {
       const character = await getCharacter(match.params.id);
+      console.log(character);
       this.setState({ character });
     }
     catch (err) {
@@ -23,16 +24,16 @@ export default class DetailPage extends Component {
   }
 
   render() {
-    const { character } = this.state;
+    const { character, name, image, species, status } = this.state;
 
     if (!character) return null;
 
     return (
       <div>
-        <h2>{character.name}</h2>
-        <img src="{character.image} alt={character.name}" />
-        <p>{character.species}</p>
-        <p>{character.status}</p>
+        <h2>{name}</h2>
+        <img src={image} alt={name} />
+        <p>{species}</p>
+        <p>{status}</p>
       </div>
     );
   }
